@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-between align-items-center navbar-content">
+  <%= image_tag "logo.png", alt: "logo", width: 100 %>
+  <% if user_signed_in? %>
+    <%= link_to 'accès', experiences_path %>
+  <% else %>
+    <div>
+      <%= link_to 'connexion', new_user_session_path%>
+    </div>
+  <% end %>
+</div>
+
+
