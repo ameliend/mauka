@@ -1,6 +1,12 @@
 @import "alert";
 @import "navbar";
+@import "grid";
+@import "cards";
 
 .margin-content{
   margin-top: 89px;
+}
+
+a{
+  text-decoration: none;
 }

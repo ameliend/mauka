@@ -1,12 +1,15 @@
 <h1>Hello </h1>
 
-<% if @experiences.any? %>
-  <% @experiences.each do |experience| %>
-    <%=link_to experience_path(experience) do %>
-        <h3> <%= experience.title %></h3>
-    <% end %>
+  <% if @experiences.any? %>
+    <div class="grid">
+      <% @experiences.each do |experience| %>
+        <%=link_to experience_path(experience) do %>
+          <div class="card">
+            <h3> <%= experience.title %></h3>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <%else %>
+    <h3>nothing here atm</h3>
   <% end %>
-<%else %>
-<h3>nothing here atm</h3>
-
-<% end %>
