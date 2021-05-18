@@ -1,8 +1,11 @@
 <h1>Hello </h1>
 
+<% if @experiences.any? %>
 
 <% @experiences.each do |experience| %>
   <%=link_to experience_path(experience) do %>
       <h3> <%= experience.title %></h3>
   <% end %>
+<% end %>
+
 <% end %>
