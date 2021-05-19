@@ -6,7 +6,12 @@
       <% @experiences.each do |experience| %>
         <%=link_to experience_path(experience) do %>
           <div class="card">
-            <h3> <%= experience.title %></h3>
+            <% if experience.photo.attached? %>
+              <div class="card-img">
+                <%= cl_image_tag experience.photo.key %>
+              </div>
+            <% end %>
+            <h3><%=experience.title%></h3>
           </div>
         <% end %>
       <% end %>
