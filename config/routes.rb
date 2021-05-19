@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
   resources :experiences
 
+  get '/mon-compte', to: "pages#mon_compte"
+
+
 end

@@ -3,8 +3,8 @@
   <% if user_signed_in? %>
     <%= link_to 'accès', experiences_path %>
   <% else %>
-    <div>
-      <%= link_to 'connexion', new_user_session_path%>
+    <div class="button-orange">
+      <%= link_to 'Connexion', new_user_session_path%>
     </div>
   <% end %>
 </div>
