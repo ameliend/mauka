@@ -8,6 +8,7 @@ class ExperiencesController < ApplicationController
 
   def create
     @experience = Experience.new(experience_params)
+    @experience.user = current_user
     if @experience.save
       flash[:notice] = "L'expérience #{@experience.title} a bien été créé"
       redirect_to experiences_path
@@ -38,12 +39,10 @@ class ExperiencesController < ApplicationController
 
 private
   def experience_params
-    params.require(:experience).permit(:title, :photo)
+    params.require(:experience).permit(:title, :category, :photo)
   end
 
   def set_experience
     @experience = Experience.find(params[:id])
   end
-
-
 end
