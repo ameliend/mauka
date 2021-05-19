@@ -1,5 +1,12 @@
-<%= simple_form_for(@experience) do |f| %>
-  <%= f.input :title %>
-   <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <h2 class="mb-5">Créer une nouvelle expérience</h2>
+        <%= simple_form_for(@experience) do |f| %>
+          <%= f.input :title,  label: "Nome de l'expérience" %><br />
+          <%= f.input :photo, label: "Choisir une photo ", as: :file %><br />
+          <%= f.submit "Ajouter l'expérience", class: "button-orange" %><br />
+        <% end %>
+    </div>
+  </div>
+</div>
