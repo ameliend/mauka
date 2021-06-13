@@ -1,0 +1,9 @@
+
+<% if @experiencings.any? %>
+  <% @experiencings.each do |experiencing| %>
+    <h3><%=experiencing.experience.title%></h3>
+  <% end %>
+<%else %>
+    <h3>nothing here atm</h3>
+<% end %>
+

@@ -3,3 +3,4 @@
     <%= link_to 'Ajouter une expérience', new_experience_path, class: 'button-orange' %>
 </div>
 
+ <%= render partial:'./experiencings/index', :locals => { user: current_user} %>

@@ -22,6 +22,7 @@ class ExperiencesController < ApplicationController
   end
 
   def show
+    @experiencing = Experiencing.new
   end
 
   def edit

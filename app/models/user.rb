@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :experiences, dependent: :destroy
+  has_many :experiencings, dependent: :destroy
 end
